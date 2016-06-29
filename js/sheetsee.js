@@ -16112,6 +16112,7 @@ module.exports.initiateTableFilter = function(opts) {
     $(this.id + ".noMatches").css("visibility", "hidden")
     $(this.id + opts.filterDiv).val("")
     makeTable(opts)
+    window.location.hash = ""
   })
   $(opts.filterDiv).keyup(function(e) {
     var text = $(e.target).val()
